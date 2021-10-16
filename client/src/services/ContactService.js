@@ -1,27 +1,27 @@
-import http from "../http-common";
+import axios from 'axios';
 
 const getAll = () => {
-    return http.get("/contacts");
+    return axios.get("/api/contacts");
 };
 
 const get = id => {
-    return http.get(`/contacts/${id}`);
+    return axios.get(`/api/contacts/${id}`);
 };
 
 const create = data => {
-    return http.post("/contacts", data);
+    return axios.post("/api/contacts", data);
 };
 
 const update = (id, data) => {
-    return http.put(`/contacts/${id}`, data);
+    return axios.put(`/api/contacts/${id}`, data);
 };
 
 const remove = id => {
-    return http.delete(`/contacts/${id}`);
+    return axios.delete(`/api/contacts/${id}`);
 };
 
 const removeAll = () => {
-    return http.delete(`/contacts`);
+    return axios.delete(`/api/contacts`);
 };
 
 export default {
