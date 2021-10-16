@@ -1,0 +1,28 @@
+module.exports = mongoose => {
+    const Contact = mongoose.model(
+        "contact",
+        mongoose.Schema(
+            {
+                firstname: {
+                    type: String,
+                    required: true
+                },
+                lastname: {
+                    type: String,
+                    required: true
+                },
+                email: {
+                    type: String,
+                    required: true
+                },
+                address: {
+                    type: String,
+                    required: true
+                },
+            },
+            { timestamps: true }
+        )
+    );
+
+    return Contact;
+};
